@@ -28,6 +28,7 @@
 	- Number '2' to use that texture for right mouse click;
 	- Number '3' to get to the previous group of textures in Area '2';
 	- Number '4' to get to the next group of textures in Area '2';
+	- right shift to toggle 'delete' mode on/off (mouse clicking will destroy objects);
 	- 'Esc' to show the option's menu;
 
 **4)** Finnally, to save your map, you just need to go open up the option's menu and select 'Save current map' an type in its name (the file will be created in the same directory as the textures are);
@@ -42,5 +43,27 @@ The way the binary is created is as follows:
 	- The 2nd byte represents the extension's version number, which is also set to 1;
 	- After these 2 fixed bytes, there is just a loop in the code that goes through all the created cubes and groups them by texture (keep this in mind);
 	- Another loop will go through each found texture doing the following:
-		**1)** write the texture's index (1 byte long, as you are limited to 256 textures);
-		**2)** 
+		1) write the texture's index (1 byte, hence the limit of 256 textures);
+		2) for each cube write it's X coordinate (1 byte), Y coordinate (1 byte), and Z coordinate(1 byte);
+		3) once there are no more cubes for that texture, write 2 extra 'ghost cubes' at position (0, 0, 0) (this just means it will write 2 times: 0x00 for X, 0x00 for Y and 0x00 for Z);
+		4) when generating the map, the step above makes it easy to see when a sequence ends as there can never be 2 cubes with the same position... (so, if the binary says there are, stop);
+
+**NOTE:** This whole process always starts from the lower index texture found.
+
+#Taking it a step further!
+
+I previously said that this application would not be limiting, but we are just creating cubes with plain textures, right...? Wrong!
+What we are actually doing is generating a .wmap file that contains groups of objects, not objects themselves... The cubes with plain textures are for you to get a preview of what your map will look like.
+Let me give you an example.
+
+----------
+
+Lets say I create 4 different textures: 'a_blue_texture.png', 'b_red_texture.png', 'c_ball_texture.png' and 'd_command_texture.png'. 
+Now I open up the editor and just randomly put these blocks wherever I can (just because I can...).
+Promptly I save my map and exit the app. I now know the numbers correspondant to each texture in the file, right? (When loading them, the editor gets them in alphabethical order). This means that 'a_blue_texture.png' will be 0, 'b_red_texture.png' will be 1, 'c_ball_texture.png' will be 2 and 'd_command_texture.png' will be 3.
+
+Now for the usefull part, when I load the map from the file I can do either one of two things: litterally just create the map as I made it in the editor (with cubes all the way) or I can twist things up a bit. I can read the .wmap file and say: "Computer, you will give me blue cubes for all of the positions with index 0. You shall change the color to red for index 1, but still give me cubes. When you generate at index 2, you can use spheres instead. Finnally, at index 3, you shall kill anyone who steps on it!"
+
+In the editor you phisically see every cube you create, but they dont need to actually be physical when you play your game. When loading the map, you can program every single index to do whatever you want it to do, not just bring more cubes and shapes ;)
+
+----------
