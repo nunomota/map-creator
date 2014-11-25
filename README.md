@@ -4,11 +4,12 @@
 
 #First steps:
 
-1) Once you open up the application, to start creating a map, it will require you to input a directory - in which you should have the textures that will be used for that project (these textures are expected to be .png separate images).
 
-2) After that, it will take care of a few things for you: as you can only build blocks by attaching them to others blocks, a non-editeable floor will be created for you.
+**1)** Once you open up the application, to start creating a map, it will require you to input a directory - in which you should have the textures that will be used for that project (these textures are expected to be .png separate images).
 
-3) Wait a bit and you shall be prompted with a simple GUI, as show below:
+**2)** After that, it will take care of a few things for you: as you can only build blocks by attaching them to others blocks, a non-editeable floor will be created for you.
+
+**3)** Wait a bit and you shall be prompted with a simple GUI, as show below:
 
 ![MapCreator GUI](/Screenshots/GUI.png?raw=true)
 
@@ -18,7 +19,7 @@
 	- Area '1' holds the information related to the textures being held by each mouse key (if you use your left mouse key it means you use texture 1, right means you use texture 2);
 	- Area '2' contains the information of the textures present in the directory you specified (up to 256 different textures);
 
-	**Input**:
+**Input**:
 	- left mouse click to create cube with texture 1, from Area '1';
 	- right mouse click to create cube with texture 2, from Area '1';
 	- mouse scrollwheel scroll to change the selected texture in Area '2';
