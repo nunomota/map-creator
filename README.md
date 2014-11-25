@@ -20,6 +20,7 @@
 	- Area '2' contains the information of the textures present in the directory you specified (up to 256 different textures);
 
 **Input**:
+
 	- left mouse click to create cube with texture 1, from Area '1';
 	- right mouse click to create cube with texture 2, from Area '1';
 	- mouse scrollwheel scroll to change the selected texture in Area '2';
