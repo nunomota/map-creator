@@ -10,8 +10,21 @@
 
 ![MapCreator GUI](/Screenshots/GUI.png?raw=true)
 
-	- 
-	- 
+	- There are two main areas always present throughout the whole level design, here marked with '1' and '2';
+	- In the middle of the screen you can see a tiny crosshair pointing towards a semi-transparent cube, which is your 'preview-cube' - it will show you where you will be building your block;
+	- Once you see this cube it means you can build a new block, in that position, by using any of the mouse buttons (left or right);
+	- Area '1' holds the information related to the textures being held by each mouse key (if you use your left mouse key it means you use texture 1, right means you use texture 2);
+	- Area '2' contains the information of the textures present in the directory you specified (up to 256 different textures);
+
+	**Input**:
+	- left mouse click to create cube with texture 1, from Area '1';
+	- right mouse click to create cube with texture 2, from Area '1';
+	- mouse scrollwheel scroll to change the selected texture in Area '2';
+	- Number '1' to use that texture for left mouse click;
+	- Number '2' to use that texture for right mouse click;
+	- Number '3' to get to the previous group of textures in Area '2';
+	- Number '4' to get to the next group of textures in Area '2';
+	- 'Esc' to show the option's menu;
 
 #How does it work?
 
