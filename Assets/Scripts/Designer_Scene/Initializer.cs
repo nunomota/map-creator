@@ -599,18 +599,6 @@ public class Initializer : MonoBehaviour {
 			}
 			smallestVector = GetSmallestVector(cubeArray);
 			AdjustCubeGrid(smallestVector);
-			/*
-			TODO write the file header (8 bit signature, 8 bit version)
-			TODO write 3 bits to the file (x); these 3 bits represent the integer number of bits needed to represent "biggestCoord", less one -> the "biggestCoord" will never be 0 bits long. 3 bits now represent [1...8]
-			TODO write 3 bits to the file (y); these 3 bits represent the integer number of bits needed to represent "textureList.Count", less one -> same explanation as above
-			TODO write y bits to the file (represents the texture's number being addressed)
-			TODO write x bits to the file, for each cube with that texture, for each of his x,y,z coordinates
-			TODO write "0" 6 times, with x bits each of the times; This would mean 2 cubes at (0, 0, 0), which is not possible -> this way I know that, after this sequence, a new texture is goind to start
-			-------Preview-------
-			|Defines "x"|Defines "y"|Texture nº | Vector.x  | Vector.y  | Vector.z  | Vector.x  | Vector.y  | Vector.z  |  0  |  0  |  0  |  0  |  0  |  0  |...
-			|     3     |     3     |     y     |     x     |     x     |     x     |     x     |     x     |     x     |  x  |  x  |  x  |  x  |  x  |  x  |...
-			---------------------
-			 */
 
 			FillByteArray();
 			WriteByteArrayToFile(path);

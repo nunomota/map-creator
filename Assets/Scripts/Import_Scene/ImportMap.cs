@@ -9,7 +9,7 @@ public class ImportMap : MonoBehaviour {
 
 	//---------------test---------------
 	private Map test;
-	private string path = "E:\\Users\\Miguel\\Desktop\\MapCreator\\wow.wmap";
+	private string path = "";
 
 	void Start () {
 		test = Import(path, new Vector3(0, 0, 0));
