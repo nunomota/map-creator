@@ -1,4 +1,6 @@
-![MapCreator Icon](/Assets/Resources/Textures/Icon.png?raw=true)
+<p align="center">
+  <img src="/Assets/Resources/Textures/Icon.png?raw=true" alt="MapCreator Icon"/>
+</p>
 
 **MapCreator** is a simple 3D map creator (obviously), developed with Unity3D. It is meant to make the "scenario creation" step of a game/app development much easier, yet not limiting. 
 
