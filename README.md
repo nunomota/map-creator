@@ -5,7 +5,9 @@
 #First steps:
 
 1) Once you open up the application, to start creating a map, it will require you to input a directory - in which you should have the textures that will be used for that project (these textures are expected to be .png separate images).
+
 2) After that, it will take care of a few things for you: as you can only build blocks by attaching them to others blocks, a non-editeable floor will be created for you.
+
 3) Wait a bit and you shall be prompted with a simple GUI, as show below:
 
 ![MapCreator GUI](/Screenshots/GUI.png?raw=true)
