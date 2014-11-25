@@ -66,6 +66,6 @@ Promptly I save my map and exit the app. I now know the numbers correspondant to
 
 Now for the usefull part, when I load the map from the file I can do either one of two things: litterally just create the map as I made it in the editor (with cubes all the way) or I can twist things up a bit. I can read the .wmap file and say: "Computer, you will give me blue cubes for all of the positions with index 0. You shall change the color to red for index 1, but still give me cubes. When you generate at index 2, you can use spheres instead. Finnally, at index 3, you shall kill anyone who steps on it!"
 
-In the editor you phisically see every cube you create, but they dont need to actually be physical when you play your game. When loading the map, you can program every single index to do whatever you want it to do, not just bring more cubes and shapes ;)
+In the editor you physically see every cube you create, but they dont need to actually be physical when you play your game. When loading the map, you can program every single index to do whatever you want it to do, not just bring more cubes and shapes ;)
 
 ----------
